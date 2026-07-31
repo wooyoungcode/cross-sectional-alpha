@@ -1,0 +1,1507 @@
+ticker,sector,size_tier
+A,Health Care,large
+AA,Materials,mid
+AAL,Industrials,mid
+AAMI,Financials,small
+AAON,Industrials,mid
+AAP,Consumer Discretionary,small
+AAPL,Information Technology,large
+AAT,Real Estate,small
+ABBV,Health Care,large
+ABCB,Financials,small
+ABG,Consumer Discretionary,small
+ABM,Industrials,small
+ABNB,Consumer Discretionary,large
+ABR,Financials,small
+ABT,Health Care,large
+ACA,Industrials,small
+ACAD,Health Care,small
+ACGL,Financials,large
+ACHC,Health Care,small
+ACI,Consumer Staples,mid
+ACIW,Information Technology,small
+ACLS,Information Technology,small
+ACM,Industrials,mid
+ACMR,Information Technology,small
+ACN,Information Technology,large
+ACT,Financials,small
+ADAM,Real Estate,small
+ADBE,Information Technology,large
+ADC,Real Estate,mid
+ADEA,Information Technology,small
+ADI,Information Technology,large
+ADM,Consumer Staples,large
+ADMA,Health Care,small
+ADNT,Consumer Discretionary,small
+ADP,Industrials,large
+ADSK,Information Technology,large
+ADT,Consumer Discretionary,small
+ADUS,Health Care,small
+AEE,Utilities,large
+AEIS,Information Technology,mid
+AEO,Consumer Discretionary,small
+AEP,Utilities,large
+AES,Utilities,large
+AESI,Energy,small
+AFG,Financials,mid
+AFL,Financials,large
+AGCO,Industrials,mid
+AGNT,Real Estate,small
+AGO,Financials,small
+AGX,Industrials,small
+AGYS,Information Technology,small
+AHCO,Health Care,small
+AHR,Real Estate,mid
+AIG,Financials,large
+AIN,Industrials,small
+AIR,Industrials,small
+AIT,Industrials,mid
+AIZ,Financials,large
+AJG,Financials,large
+AKAM,Information Technology,large
+AKR,Real Estate,small
+ALB,Materials,large
+ALG,Industrials,small
+ALGM,Information Technology,mid
+ALGN,Health Care,large
+ALGT,Industrials,small
+ALHC,Health Care,small
+ALK,Industrials,mid
+ALKS,Health Care,small
+ALL,Financials,large
+ALLE,Industrials,large
+ALLY,Financials,mid
+ALRM,Financials,small
+ALSN,Industrials,mid
+ALV,Consumer Discretionary,mid
+AM,Energy,mid
+AMAT,Information Technology,large
+AMCR,Materials,large
+AMD,Information Technology,large
+AME,Industrials,large
+AMG,Financials,mid
+AMGN,Health Care,large
+AMH,Real Estate,mid
+AMKR,Information Technology,mid
+AMN,Health Care,small
+AMP,Financials,large
+AMPH,Health Care,small
+AMR,Materials,small
+AMRX,Health Care,small
+AMSF,Financials,small
+AMT,Real Estate,large
+AMTM,Industrials,small
+AMZN,Consumer Discretionary,large
+AN,Consumer Discretionary,mid
+ANDE,Consumer Staples,small
+ANET,Information Technology,large
+ANF,Consumer Discretionary,mid
+ANIP,Health Care,small
+AON,Financials,large
+AORT,Health Care,small
+AOS,Industrials,large
+AOSL,Information Technology,small
+APA,Energy,large
+APAM,Financials,small
+APD,Materials,large
+APG,Industrials,mid
+APH,Information Technology,large
+APLE,Real Estate,small
+APO,Financials,large
+APOG,Industrials,small
+APP,Information Technology,large
+APPF,Information Technology,mid
+APTV,Consumer Discretionary,large
+AR,Energy,mid
+ARCB,Industrials,small
+ARE,Real Estate,large
+ARES,Financials,large
+ARLO,Information Technology,small
+ARMK,Consumer Discretionary,mid
+AROC,Energy,small
+ARR,Real Estate,small
+ARW,Information Technology,mid
+ARWR,Health Care,mid
+ASB,Financials,mid
+ASH,Materials,mid
+ASO,Consumer Discretionary,small
+ASTE,Industrials,small
+ASTH,Health Care,small
+ATEN,Information Technology,small
+ATI,Industrials,mid
+ATMU,Industrials,small
+ATO,Utilities,large
+ATR,Materials,mid
+AUB,Financials,small
+AVA,Utilities,small
+AVAV,Industrials,mid
+AVB,Real Estate,large
+AVGO,Information Technology,large
+AVNT,Materials,mid
+AVT,Information Technology,mid
+AVTR,Health Care,mid
+AVY,Materials,large
+AWI,Industrials,small
+AWK,Utilities,large
+AWR,Utilities,small
+AX,Financials,small
+AXON,Industrials,large
+AXP,Financials,large
+AXTA,Materials,mid
+AYI,Industrials,mid
+AZO,Consumer Discretionary,large
+AZTA,Health Care,small
+AZZ,Industrials,small
+BA,Industrials,large
+BAC,Financials,large
+BAH,Industrials,mid
+BALL,Materials,large
+BANC,Financials,small
+BANF,Financials,small
+BANR,Financials,small
+BAX,Health Care,large
+BBT,Financials,small
+BBWI,Consumer Discretionary,mid
+BBY,Consumer Discretionary,large
+BC,Consumer Discretionary,mid
+BCC,Industrials,small
+BCO,Industrials,mid
+BCPC,Materials,small
+BDC,Information Technology,mid
+BDX,Health Care,large
+BEN,Financials,large
+BF-B,Consumer Staples,large
+BFAM,Consumer Discretionary,small
+BFH,Financials,small
+BFS,Real Estate,small
+BG,Consumer Staples,large
+BGC,Financials,small
+BHE,Information Technology,small
+BHF,Financials,mid
+BIIB,Health Care,large
+BILL,Information Technology,mid
+BIO,Health Care,mid
+BJ,Consumer Staples,mid
+BJRI,Consumer Discretionary,small
+BKE,Consumer Discretionary,small
+BKH,Utilities,mid
+BKNG,Consumer Discretionary,large
+BKR,Energy,large
+BKU,Financials,small
+BL,Information Technology,small
+BLDR,Industrials,large
+BLFS,Health Care,small
+BLK,Financials,large
+BLKB,Information Technology,small
+BMI,Information Technology,small
+BMRN,Health Care,mid
+BMY,Health Care,large
+BNL,Real Estate,small
+BNY,Financials,large
+BOH,Financials,small
+BOOT,Consumer Discretionary,small
+BOX,Information Technology,small
+BR,Industrials,large
+BRC,Industrials,small
+BRK-B,Financials,large
+BRKR,Health Care,mid
+BRO,Financials,large
+BROS,Consumer Discretionary,mid
+BRX,Real Estate,mid
+BSX,Health Care,large
+BSY,Information Technology,mid
+BTSG,Health Care,mid
+BTU,Energy,small
+BURL,Consumer Discretionary,mid
+BWA,Consumer Discretionary,mid
+BWXT,Industrials,mid
+BX,Financials,large
+BXMT,Financials,small
+BXP,Real Estate,large
+BYD,Consumer Discretionary,mid
+C,Financials,large
+CACC,Financials,small
+CACI,Industrials,mid
+CAG,Consumer Staples,small
+CAH,Health Care,large
+CAKE,Consumer Discretionary,small
+CALM,Consumer Staples,small
+CALX,Information Technology,small
+CALY,Consumer Discretionary,small
+CAR,Industrials,mid
+CARG,Communication Services,small
+CARR,Industrials,large
+CART,Consumer Staples,mid
+CASH,Financials,small
+CASY,Consumer Staples,large
+CAT,Industrials,large
+CATY,Financials,small
+CAVA,Consumer Discretionary,mid
+CB,Financials,large
+CBOE,Financials,large
+CBRE,Real Estate,large
+CBRL,Consumer Discretionary,small
+CBSH,Financials,mid
+CBT,Materials,mid
+CBU,Financials,small
+CC,Materials,small
+CCI,Real Estate,large
+CCK,Materials,mid
+CCL,Consumer Discretionary,large
+CCOI,Communication Services,small
+CCS,Consumer Discretionary,small
+CDE,Materials,mid
+CDNS,Information Technology,large
+CDP,Real Estate,mid
+CDW,Information Technology,large
+CE,Materials,small
+CEG,Utilities,large
+CELH,Consumer Staples,mid
+CENT,Consumer Staples,small
+CENTA,Consumer Staples,small
+CENX,Materials,small
+CERT,Health Care,small
+CF,Materials,large
+CFFN,Financials,small
+CFG,Financials,large
+CFR,Financials,mid
+CG,Financials,mid
+CGNX,Information Technology,mid
+CHCO,Financials,small
+CHD,Consumer Staples,large
+CHDN,Consumer Discretionary,mid
+CHE,Health Care,mid
+CHEF,Consumer Staples,small
+CHH,Consumer Discretionary,mid
+CHRD,Energy,mid
+CHRW,Industrials,large
+CHTR,Communication Services,large
+CHWY,Consumer Discretionary,mid
+CI,Health Care,large
+CIEN,Information Technology,large
+CINF,Financials,large
+CL,Consumer Staples,large
+CLF,Materials,mid
+CLH,Industrials,mid
+CLSK,Information Technology,small
+CLX,Consumer Staples,large
+CMC,Materials,mid
+CMCSA,Communication Services,large
+CME,Financials,large
+CMG,Consumer Discretionary,large
+CMI,Industrials,large
+CMS,Utilities,large
+CNC,Health Care,large
+CNH,Industrials,mid
+CNK,Communication Services,small
+CNM,Industrials,mid
+CNMD,Health Care,small
+CNO,Financials,mid
+CNP,Utilities,large
+CNR,Energy,small
+CNS,Financials,small
+CNX,Energy,mid
+CNXC,Industrials,small
+CNXN,Information Technology,small
+COCO,Consumer Staples,small
+COF,Financials,large
+COHR,Information Technology,large
+COHU,Information Technology,small
+COIN,Financials,large
+COKE,Consumer Staples,mid
+COLB,Financials,mid
+COLL,Health Care,small
+COLM,Consumer Discretionary,mid
+CON,Health Care,small
+COO,Health Care,large
+COP,Energy,large
+COR,Health Care,large
+CORT,Health Care,small
+COST,Consumer Staples,large
+COTY,Consumer Staples,small
+CPAY,Financials,large
+CPB,Consumer Staples,small
+CPF,Financials,small
+CPK,Utilities,small
+CPRI,Consumer Discretionary,mid
+CPRT,Industrials,large
+CPT,Real Estate,large
+CR,Industrials,mid
+CRBG,Financials,mid
+CRC,Energy,small
+CRGY,Energy,small
+CRH,Materials,large
+CRI,Consumer Discretionary,small
+CRK,Energy,small
+CRL,Health Care,large
+CRM,Information Technology,large
+CROX,Consumer Discretionary,mid
+CRS,Industrials,mid
+CRSR,Information Technology,small
+CRUS,Information Technology,mid
+CRVL,Health Care,small
+CRWD,Information Technology,large
+CSCO,Information Technology,large
+CSGP,Real Estate,large
+CSL,Industrials,mid
+CSR,Real Estate,small
+CSW,Industrials,small
+CSX,Industrials,large
+CTAS,Industrials,large
+CTRE,Real Estate,mid
+CTS,Information Technology,small
+CTSH,Information Technology,large
+CTVA,Materials,large
+CUBE,Real Estate,mid
+CUBI,Financials,small
+CURB,Real Estate,small
+CUZ,Real Estate,mid
+CVBF,Financials,small
+CVCO,Consumer Discretionary,small
+CVI,Energy,small
+CVLT,Information Technology,mid
+CVNA,Consumer Discretionary,large
+CVS,Health Care,large
+CVSA,Consumer Discretionary,small
+CVX,Energy,large
+CW,Industrials,mid
+CWEN,Utilities,small
+CWEN-A,Utilities,small
+CWK,Real Estate,small
+CWST,Industrials,small
+CWT,Utilities,small
+CXM,Information Technology,small
+CXT,Information Technology,mid
+CXW,Industrials,small
+CYTK,Health Care,mid
+CZR,Consumer Discretionary,small
+D,Utilities,large
+DAL,Industrials,large
+DAN,Consumer Discretionary,small
+DAR,Consumer Staples,mid
+DASH,Consumer Discretionary,large
+DAVE,Financials,small
+DBD,Information Technology,small
+DBX,Information Technology,mid
+DCH,Consumer Discretionary,small
+DCI,Industrials,mid
+DCOM,Financials,small
+DD,Materials,large
+DDOG,Information Technology,large
+DE,Industrials,large
+DEA,Real Estate,small
+DECK,Consumer Discretionary,large
+DEI,Real Estate,small
+DELL,Information Technology,large
+DFH,Consumer Discretionary,small
+DFIN,Financials,small
+DG,Consumer Staples,large
+DGII,Information Technology,small
+DGX,Health Care,large
+DHI,Consumer Discretionary,large
+DHR,Health Care,large
+DINO,Energy,mid
+DIOD,Information Technology,small
+DIS,Communication Services,large
+DKS,Consumer Discretionary,mid
+DLB,Information Technology,mid
+DLR,Real Estate,large
+DLTR,Consumer Staples,large
+DLX,Industrials,small
+DMC,Consumer Staples,small
+DNOW,Industrials,small
+DOC,Real Estate,large
+DOCN,Information Technology,mid
+DOCS,Health Care,mid
+DOCU,Information Technology,mid
+DORM,Consumer Discretionary,small
+DOV,Industrials,large
+DOW,Materials,large
+DPZ,Consumer Discretionary,large
+DRH,Real Estate,small
+DRI,Consumer Discretionary,large
+DT,Information Technology,mid
+DTE,Utilities,large
+DTM,Energy,mid
+DUK,Utilities,large
+DUOL,Consumer Discretionary,mid
+DV,Communication Services,small
+DVA,Health Care,large
+DVN,Energy,large
+DXC,Information Technology,small
+DXCM,Health Care,large
+DXPE,Industrials,small
+DY,Industrials,mid
+EA,Communication Services,large
+EAT,Consumer Discretionary,small
+EBAY,Consumer Discretionary,large
+EBC,Financials,small
+ECG,Industrials,small
+ECHO,Communication Services,large
+ECL,Materials,large
+ECPG,Financials,small
+ED,Utilities,large
+EEFT,Financials,mid
+EFC,Financials,small
+EFOR,Information Technology,small
+EFX,Industrials,large
+EG,Financials,large
+EGBN,Financials,small
+EGP,Real Estate,mid
+EHC,Health Care,mid
+EIG,Financials,small
+EIX,Utilities,large
+EL,Consumer Staples,large
+ELAN,Health Care,mid
+ELF,Consumer Staples,mid
+ELS,Real Estate,mid
+ELV,Health Care,large
+EME,Industrials,large
+EMN,Materials,small
+EMR,Industrials,large
+ENOV,Health Care,small
+ENPH,Information Technology,small
+ENR,Consumer Staples,small
+ENS,Industrials,mid
+ENSG,Health Care,mid
+ENTG,Information Technology,mid
+ENVA,Financials,small
+EOG,Energy,large
+EPAC,Industrials,small
+EPAM,Information Technology,small
+EPC,Consumer Staples,small
+EPR,Real Estate,mid
+EPRT,Real Estate,small
+EQH,Financials,mid
+EQIX,Real Estate,large
+EQR,Real Estate,large
+EQT,Energy,large
+ERIE,Financials,large
+ES,Utilities,large
+ESAB,Industrials,mid
+ESE,Industrials,small
+ESI,Materials,small
+ESNT,Financials,mid
+ESS,Real Estate,large
+ETN,Industrials,large
+ETR,Utilities,large
+ETSY,Consumer Discretionary,small
+EVR,Financials,mid
+EVRG,Utilities,large
+EVTC,Financials,small
+EW,Health Care,large
+EWBC,Financials,mid
+EXC,Utilities,large
+EXE,Energy,large
+EXEL,Health Care,mid
+EXLS,Industrials,mid
+EXP,Materials,mid
+EXPD,Industrials,large
+EXPE,Consumer Discretionary,large
+EXPO,Industrials,mid
+EXR,Real Estate,large
+EXTR,Information Technology,small
+EYE,Consumer Discretionary,small
+EZPW,Financials,small
+F,Consumer Discretionary,large
+FA,Industrials,small
+FAF,Financials,mid
+FANG,Energy,large
+FAST,Industrials,large
+FBIN,Industrials,mid
+FBK,Financials,small
+FBNC,Financials,small
+FBP,Financials,small
+FBRT,Real Estate,small
+FCF,Financials,small
+FCFS,Financials,mid
+FCN,Industrials,mid
+FCPT,Real Estate,small
+FCX,Materials,large
+FDS,Financials,large
+FDX,Industrials,large
+FDXF,Industrials,large
+FE,Utilities,large
+FELE,Industrials,small
+FFBC,Financials,small
+FFIN,Financials,mid
+FFIV,Information Technology,large
+FG,Financials,small
+FHB,Financials,small
+FHI,Financials,mid
+FHN,Financials,mid
+FIBK,Financials,small
+FICO,Information Technology,large
+FIS,Financials,large
+FISV,Financials,large
+FITB,Financials,large
+FIVE,Consumer Discretionary,mid
+FIX,Industrials,large
+FIZZ,Consumer Staples,small
+FLEX,Information Technology,large
+FLG,Financials,mid
+FLO,Consumer Staples,small
+FLR,Industrials,mid
+FLS,Industrials,mid
+FMC,Materials,small
+FN,Information Technology,mid
+FNB,Financials,mid
+FND,Consumer Discretionary,mid
+FNF,Financials,mid
+FORM,Information Technology,small
+FOUR,Financials,mid
+FOX,Communication Services,large
+FOXA,Communication Services,large
+FOXF,Consumer Discretionary,small
+FR,Real Estate,mid
+FRPT,Consumer Staples,small
+FRT,Real Estate,large
+FSLR,Information Technology,large
+FSS,Industrials,small
+FTDR,Consumer Discretionary,small
+FTI,Energy,mid
+FTNT,Information Technology,large
+FTRE,Health Care,small
+FTV,Industrials,large
+FUL,Materials,small
+FULT,Financials,small
+FUN,Consumer Discretionary,small
+G,Industrials,mid
+GAP,Consumer Discretionary,mid
+GATX,Industrials,mid
+GBCI,Financials,mid
+GBX,Industrials,small
+GD,Industrials,large
+GDDY,Information Technology,large
+GE,Industrials,large
+GEF,Materials,mid
+GEHC,Health Care,large
+GEN,Information Technology,large
+GEO,Industrials,small
+GEV,Industrials,large
+GFF,Industrials,small
+GGG,Industrials,mid
+GHC,Consumer Discretionary,mid
+GIII,Consumer Discretionary,small
+GILD,Health Care,large
+GIS,Consumer Staples,large
+GKOS,Health Care,small
+GL,Financials,large
+GLPI,Real Estate,mid
+GLW,Information Technology,large
+GM,Consumer Discretionary,large
+GME,Consumer Discretionary,mid
+GMED,Health Care,mid
+GNL,Real Estate,small
+GNRC,Industrials,large
+GNTX,Consumer Discretionary,mid
+GNW,Financials,small
+GO,Consumer Staples,small
+GOLF,Consumer Discretionary,small
+GOOG,Communication Services,large
+GOOGL,Communication Services,large
+GPC,Consumer Discretionary,large
+GPI,Consumer Discretionary,small
+GPK,Materials,mid
+GPN,Financials,large
+GPOR,Energy,small
+GRBK,Consumer Discretionary,small
+GRMN,Consumer Discretionary,large
+GS,Financials,large
+GSHD,Financials,small
+GT,Consumer Discretionary,small
+GTES,Industrials,small
+GTM,Communication Services,small
+GTY,Real Estate,small
+GVA,Industrials,small
+GWRE,Information Technology,mid
+GWW,Industrials,large
+GXO,Industrials,mid
+H,Consumer Discretionary,mid
+HAE,Health Care,mid
+HAFC,Financials,small
+HAL,Energy,large
+HALO,Health Care,mid
+HAS,Consumer Discretionary,large
+HASI,Financials,small
+HAYW,Industrials,small
+HBAN,Financials,large
+HCA,Health Care,large
+HCC,Materials,small
+HCI,Financials,small
+HCSG,Industrials,small
+HD,Consumer Discretionary,large
+HE,Utilities,small
+HFWA,Financials,small
+HGV,Consumer Discretionary,mid
+HIG,Financials,large
+HII,Industrials,large
+HIMS,Health Care,mid
+HIW,Real Estate,small
+HL,Materials,mid
+HLI,Financials,mid
+HLIT,Information Technology,small
+HLNE,Financials,mid
+HLT,Consumer Discretionary,large
+HLX,Energy,small
+HMN,Financials,small
+HNI,Industrials,small
+HOG,Consumer Discretionary,mid
+HOMB,Financials,mid
+HON,Industrials,large
+HONA,Industrials,large
+HOOD,Financials,large
+HOPE,Financials,small
+HP,Energy,small
+HPE,Information Technology,large
+HPQ,Information Technology,large
+HQY,Health Care,mid
+HR,Real Estate,mid
+HRB,Consumer Discretionary,mid
+HRL,Consumer Staples,large
+HRMY,Health Care,small
+HSIC,Health Care,large
+HST,Real Estate,large
+HSTM,Health Care,small
+HSY,Consumer Staples,large
+HTH,Financials,small
+HTLD,Industrials,small
+HTO,Utilities,small
+HTZ,Industrials,small
+HUBB,Industrials,large
+HUBG,Industrials,small
+HUM,Health Care,large
+HWC,Financials,mid
+HWKN,Materials,small
+HWM,Industrials,large
+HXL,Industrials,mid
+HZO,Consumer Discretionary,small
+IART,Health Care,small
+IBKR,Financials,large
+IBM,Information Technology,large
+IBOC,Financials,mid
+IBP,Consumer Discretionary,small
+ICE,Financials,large
+ICHR,Information Technology,small
+ICUI,Health Care,small
+IDA,Utilities,mid
+IDCC,Information Technology,mid
+IDXX,Health Care,large
+IESC,Industrials,mid
+IEX,Industrials,large
+IFF,Materials,large
+IIPR,Real Estate,small
+ILMN,Health Care,mid
+INCY,Health Care,large
+INDB,Financials,small
+INDV,Health Care,small
+INGR,Consumer Staples,mid
+INSP,Health Care,small
+INSW,Energy,small
+INTC,Information Technology,large
+INTU,Information Technology,large
+INVA,Health Care,small
+INVH,Real Estate,large
+INVX,Energy,small
+IOSP,Materials,small
+IP,Materials,large
+IPAR,Consumer Staples,small
+IPGP,Information Technology,mid
+IQV,Health Care,large
+IR,Industrials,large
+IRDM,Communication Services,small
+IRM,Real Estate,large
+IRT,Real Estate,mid
+ISRG,Health Care,large
+IT,Information Technology,large
+ITGR,Health Care,small
+ITRI,Information Technology,small
+ITT,Industrials,mid
+ITW,Industrials,large
+IVT,Real Estate,small
+IVZ,Financials,large
+J,Industrials,large
+JAZZ,Health Care,mid
+JBGS,Real Estate,small
+JBHT,Industrials,large
+JBL,Information Technology,large
+JBLU,Industrials,small
+JBSS,Consumer Staples,small
+JBTM,Industrials,small
+JCI,Industrials,large
+JEF,Financials,mid
+JJSF,Consumer Staples,small
+JKHY,Financials,large
+JLL,Real Estate,mid
+JNJ,Health Care,large
+JOE,Real Estate,small
+JPM,Financials,large
+JXN,Financials,small
+KAI,Industrials,small
+KALU,Materials,small
+KBH,Consumer Discretionary,mid
+KBR,Industrials,mid
+KD,Information Technology,mid
+KDP,Consumer Staples,large
+KEX,Industrials,mid
+KEY,Financials,large
+KEYS,Information Technology,large
+KFY,Industrials,small
+KGS,Energy,small
+KHC,Consumer Staples,large
+KIM,Real Estate,large
+KKR,Financials,large
+KLAC,Information Technology,large
+KLIC,Information Technology,small
+KMB,Consumer Staples,large
+KMI,Energy,large
+KMPR,Financials,small
+KMT,Industrials,small
+KMX,Consumer Discretionary,small
+KN,Information Technology,small
+KNF,Materials,mid
+KNSL,Financials,mid
+KNTK,Energy,small
+KNX,Industrials,mid
+KO,Consumer Staples,large
+KOP,Materials,small
+KR,Consumer Staples,large
+KRC,Real Estate,mid
+KRG,Real Estate,mid
+KRMN,Industrials,small
+KRYS,Health Care,mid
+KSS,Consumer Discretionary,small
+KTB,Consumer Discretionary,small
+KTOS,Industrials,mid
+KVUE,Consumer Staples,large
+KWR,Materials,small
+L,Financials,large
+LAD,Consumer Discretionary,mid
+LAMR,Real Estate,mid
+LAUR,Consumer Discretionary,small
+LAZ,Financials,small
+LBRT,Energy,small
+LCII,Consumer Discretionary,small
+LDOS,Industrials,large
+LEA,Consumer Discretionary,mid
+LECO,Industrials,mid
+LEG,Consumer Discretionary,small
+LEN,Consumer Discretionary,large
+LEU,Energy,small
+LFST,Health Care,small
+LFUS,Information Technology,mid
+LGIH,Consumer Discretionary,small
+LGND,Health Care,small
+LH,Health Care,large
+LHX,Industrials,large
+LIF,Information Technology,small
+LII,Industrials,large
+LIN,Materials,large
+LITE,Information Technology,large
+LIVN,Health Care,mid
+LKFN,Financials,small
+LKQ,Consumer Discretionary,small
+LLY,Health Care,large
+LMAT,Health Care,small
+LMT,Industrials,large
+LNC,Financials,small
+LNN,Materials,small
+LNT,Utilities,large
+LNTH,Health Care,mid
+LOPE,Consumer Discretionary,mid
+LOW,Consumer Discretionary,large
+LPG,Energy,small
+LPX,Industrials,mid
+LQDA,Health Care,small
+LQDT,Industrials,small
+LRCX,Information Technology,large
+LRN,Consumer Discretionary,small
+LSCC,Information Technology,mid
+LSTR,Industrials,mid
+LTC,Real Estate,small
+LTH,Consumer Discretionary,small
+LULU,Consumer Discretionary,large
+LUMN,Communication Services,small
+LUV,Industrials,large
+LVS,Consumer Discretionary,large
+LW,Consumer Staples,small
+LXP,Real Estate,small
+LYB,Materials,large
+LYFT,Industrials,small
+LYV,Communication Services,large
+LZ,Industrials,small
+LZB,Consumer Discretionary,small
+M,Consumer Discretionary,mid
+MA,Financials,large
+MAA,Real Estate,large
+MAC,Real Estate,small
+MAN,Industrials,small
+MANH,Information Technology,mid
+MAR,Consumer Discretionary,large
+MARA,Information Technology,small
+MAS,Industrials,large
+MAT,Consumer Discretionary,mid
+MATW,Consumer Discretionary,small
+MATX,Industrials,small
+MBC,Industrials,small
+MBGL,Industrials,small
+MBIN,Financials,small
+MC,Financials,small
+MCD,Consumer Discretionary,large
+MCHP,Information Technology,large
+MCK,Health Care,large
+MCO,Financials,large
+MCRI,Consumer Discretionary,small
+MCY,Financials,small
+MD,Health Care,small
+MDLZ,Consumer Staples,large
+MDT,Health Care,large
+MDU,Utilities,small
+MEDP,Health Care,mid
+MET,Financials,large
+META,Communication Services,large
+MFP,Industrials,small
+MGEE,Utilities,small
+MGM,Consumer Discretionary,large
+MGY,Energy,small
+MHK,Consumer Discretionary,small
+MHO,Consumer Discretionary,small
+MIDD,Industrials,mid
+MIR,Information Technology,small
+MKC,Consumer Staples,large
+MKSI,Information Technology,mid
+MKTX,Financials,small
+MLI,Industrials,mid
+MLKN,Industrials,small
+MLM,Materials,large
+MMI,Real Estate,small
+MMM,Industrials,large
+MMS,Industrials,mid
+MMSI,Health Care,small
+MNST,Consumer Staples,large
+MO,Consumer Staples,large
+MOG-A,Industrials,mid
+MOH,Health Care,mid
+MORN,Financials,mid
+MOS,Materials,large
+MP,Materials,mid
+MPC,Energy,large
+MPT,Real Estate,small
+MPWR,Information Technology,large
+MRCY,Industrials,small
+MRK,Health Care,large
+MRNA,Health Care,large
+MRP,Real Estate,small
+MRSH,Financials,large
+MRTN,Industrials,small
+MRVL,Information Technology,large
+MS,Financials,large
+MSA,Industrials,mid
+MSCI,Financials,large
+MSEX,Utilities,small
+MSFT,Information Technology,large
+MSGS,Communication Services,small
+MSI,Information Technology,large
+MSM,Industrials,mid
+MTB,Financials,large
+MTCH,Communication Services,small
+MTD,Health Care,large
+MTDR,Energy,mid
+MTG,Financials,mid
+MTH,Consumer Discretionary,small
+MTN,Consumer Discretionary,mid
+MTRN,Materials,small
+MTSI,Information Technology,mid
+MTUS,Materials,small
+MTX,Materials,small
+MTZ,Industrials,mid
+MU,Information Technology,large
+MUR,Energy,mid
+MUSA,Consumer Discretionary,mid
+MWA,Industrials,small
+MXL,Information Technology,small
+MYRG,Industrials,small
+MZTI,Consumer Staples,mid
+NABL,Information Technology,small
+NATL,Financials,small
+NAVI,Financials,small
+NBHC,Financials,small
+NBIX,Health Care,mid
+NBTB,Financials,small
+NCLH,Consumer Discretionary,large
+NDAQ,Financials,large
+NDSN,Industrials,large
+NE,Energy,small
+NEE,Utilities,large
+NEM,Materials,large
+NEO,Health Care,small
+NEOG,Health Care,small
+NEU,Materials,mid
+NFG,Utilities,mid
+NFLX,Communication Services,large
+NGVT,Materials,small
+NHC,Health Care,small
+NHI,Real Estate,small
+NI,Utilities,large
+NIC,Financials,small
+NJR,Utilities,mid
+NKE,Consumer Discretionary,large
+NLY,Financials,mid
+NMIH,Financials,small
+NNN,Real Estate,mid
+NOC,Industrials,large
+NOG,Energy,small
+NOV,Energy,mid
+NOVT,Information Technology,mid
+NOW,Information Technology,large
+NPK,Industrials,small
+NPO,Industrials,small
+NRG,Utilities,large
+NSC,Industrials,large
+NSIT,Industrials,small
+NSP,Industrials,small
+NSSC,Information Technology,small
+NTAP,Information Technology,large
+NTCT,Information Technology,small
+NTNX,Information Technology,mid
+NTRS,Financials,large
+NTST,Real Estate,small
+NUE,Materials,large
+NVDA,Information Technology,large
+NVR,Consumer Discretionary,large
+NVST,Health Care,mid
+NVT,Industrials,mid
+NWBI,Financials,small
+NWE,Utilities,mid
+NWL,Consumer Discretionary,small
+NWN,Utilities,small
+NWS,Communication Services,large
+NWSA,Communication Services,large
+NX,Industrials,small
+NXPI,Information Technology,large
+NXRT,Real Estate,small
+NXST,Communication Services,mid
+NXT,Industrials,mid
+NYT,Communication Services,mid
+O,Real Estate,large
+OC,Industrials,mid
+ODFL,Industrials,large
+OFG,Financials,small
+OGE,Utilities,mid
+OGN,Health Care,small
+OGS,Utilities,mid
+OHI,Real Estate,mid
+OI,Materials,small
+OII,Energy,small
+OKE,Energy,large
+OKTA,Information Technology,mid
+OLED,Information Technology,mid
+OLLI,Consumer Discretionary,mid
+OLN,Materials,mid
+OMC,Communication Services,large
+OMCL,Health Care,small
+ON,Information Technology,large
+ONB,Financials,mid
+ONTO,Information Technology,mid
+OPCH,Health Care,mid
+OPLN,Industrials,small
+ORA,Utilities,mid
+ORCL,Information Technology,large
+ORI,Financials,mid
+ORLY,Consumer Discretionary,large
+OSIS,Information Technology,small
+OSK,Industrials,mid
+OSW,Consumer Discretionary,small
+OTIS,Industrials,large
+OTTR,Utilities,small
+OUT,Real Estate,small
+OVV,Energy,mid
+OXY,Energy,large
+OZK,Financials,mid
+P,Information Technology,mid
+PAG,Consumer Discretionary,mid
+PAHC,Health Care,small
+PANW,Information Technology,large
+PARR,Energy,small
+PATH,Information Technology,mid
+PATK,Consumer Discretionary,small
+PAYC,Industrials,small
+PAYO,Financials,small
+PAYX,Industrials,large
+PB,Financials,mid
+PBF,Energy,mid
+PBH,Health Care,small
+PBI,Industrials,small
+PCAR,Industrials,large
+PCG,Utilities,large
+PCRX,Health Care,small
+PCTY,Industrials,mid
+PDFS,Information Technology,small
+PEB,Real Estate,small
+PECO,Real Estate,small
+PEG,Utilities,large
+PEGA,Information Technology,mid
+PEN,Health Care,mid
+PENG,Information Technology,small
+PENN,Consumer Discretionary,small
+PEP,Consumer Staples,large
+PFBC,Financials,small
+PFE,Health Care,large
+PFG,Financials,large
+PFGC,Consumer Staples,mid
+PFS,Financials,small
+PG,Consumer Staples,large
+PGNY,Health Care,small
+PGR,Financials,large
+PH,Industrials,large
+PHIN,Consumer Discretionary,small
+PHM,Consumer Discretionary,large
+PI,Information Technology,small
+PII,Consumer Discretionary,mid
+PINS,Communication Services,mid
+PIPR,Financials,small
+PJT,Financials,small
+PK,Real Estate,mid
+PKG,Materials,large
+PLAB,Information Technology,small
+PLD,Real Estate,large
+PLMR,Financials,small
+PLNT,Consumer Discretionary,mid
+PLTR,Information Technology,large
+PLUS,Information Technology,small
+PLXS,Information Technology,small
+PM,Consumer Staples,large
+PMT,Real Estate,small
+PNC,Financials,large
+PNFP,Financials,mid
+PNR,Industrials,large
+PNW,Utilities,large
+PODD,Health Care,large
+POOL,Consumer Discretionary,small
+POR,Utilities,mid
+POST,Consumer Staples,mid
+POWI,Information Technology,small
+POWL,Industrials,small
+PPC,Consumer Staples,mid
+PPG,Materials,large
+PPL,Utilities,large
+PPLI,Communication Services,small
+PR,Energy,mid
+PRDO,Consumer Discretionary,small
+PRG,Financials,small
+PRGO,Health Care,small
+PRGS,Information Technology,small
+PRI,Financials,mid
+PRIM,Industrials,small
+PRK,Financials,small
+PRKS,Consumer Discretionary,small
+PRLB,Industrials,small
+PRSU,Consumer Discretionary,small
+PRU,Financials,large
+PRVA,Health Care,small
+PSA,Real Estate,large
+PSKY,Communication Services,large
+PSMT,Consumer Staples,small
+PSN,Industrials,mid
+PSX,Energy,large
+PTC,Information Technology,large
+PTCT,Health Care,small
+PTEN,Energy,small
+PTGX,Health Care,small
+PTON,Consumer Discretionary,small
+PVH,Consumer Discretionary,mid
+PWR,Industrials,large
+PYPL,Financials,large
+PZZA,Consumer Discretionary,small
+Q,Information Technology,large
+QCOM,Information Technology,large
+QDEL,Health Care,small
+QLYS,Information Technology,mid
+QNST,Communication Services,small
+QRVO,Information Technology,small
+QTWO,Information Technology,small
+R,Industrials,mid
+RAL,Information Technology,small
+RAMP,Information Technology,small
+RBA,Industrials,mid
+RBC,Industrials,mid
+RCL,Consumer Discretionary,large
+RCUS,Health Care,small
+RDN,Financials,small
+RDNT,Health Care,small
+REG,Real Estate,large
+REGN,Health Care,large
+RELY,Financials,small
+RES,Energy,small
+REX,Energy,small
+REXR,Real Estate,mid
+REYN,Consumer Staples,small
+REZI,Industrials,small
+RF,Financials,large
+RGA,Financials,mid
+RGEN,Health Care,mid
+RGLD,Materials,mid
+RH,Consumer Discretionary,mid
+RHI,Industrials,small
+RHP,Real Estate,small
+RITM,Financials,small
+RJF,Financials,large
+RL,Consumer Discretionary,large
+RLI,Financials,mid
+RMBS,Information Technology,mid
+RMD,Health Care,large
+RNG,Information Technology,small
+RNR,Financials,mid
+RNST,Financials,small
+ROAD,Industrials,small
+ROCK,Industrials,small
+ROG,Information Technology,small
+ROIV,Health Care,mid
+ROK,Industrials,large
+ROKU,Communication Services,mid
+ROL,Industrials,large
+ROP,Information Technology,large
+ROST,Consumer Discretionary,large
+RPM,Materials,mid
+RRC,Energy,mid
+RRR,Consumer Discretionary,small
+RRX,Industrials,mid
+RS,Materials,mid
+RSG,Industrials,large
+RSI,Consumer Discretionary,small
+RTX,Industrials,large
+RUN,Industrials,small
+RUSHA,Industrials,small
+RVTY,Health Care,large
+RXO,Industrials,small
+RYAN,Financials,mid
+RYN,Real Estate,mid
+SABR,Consumer Discretionary,small
+SAFE,Real Estate,small
+SAFT,Financials,small
+SAH,Consumer Discretionary,small
+SAIA,Industrials,mid
+SAIC,Industrials,mid
+SAM,Consumer Staples,mid
+SANM,Information Technology,mid
+SARO,Industrials,mid
+SBAC,Real Estate,large
+SBCF,Financials,small
+SBH,Consumer Discretionary,small
+SBRA,Real Estate,mid
+SBSI,Financials,small
+SBUX,Consumer Discretionary,large
+SCHL,Consumer Discretionary,small
+SCHW,Financials,large
+SCI,Consumer Discretionary,mid
+SCL,Materials,small
+SCSC,Information Technology,small
+SDGR,Health Care,small
+SEDG,Information Technology,small
+SEI,Energy,small
+SEIC,Financials,mid
+SEZL,Financials,small
+SF,Financials,mid
+SFBS,Financials,small
+SFM,Consumer Staples,mid
+SFNC,Financials,small
+SGI,Consumer Discretionary,mid
+SHAK,Consumer Discretionary,small
+SHC,Health Care,mid
+SHEN,Communication Services,small
+SHO,Real Estate,small
+SHOO,Consumer Discretionary,small
+SHW,Materials,large
+SIG,Consumer Discretionary,small
+SIGI,Financials,mid
+SIRI,Communication Services,mid
+SITM,Information Technology,mid
+SJM,Consumer Staples,large
+SKT,Real Estate,small
+SKY,Consumer Discretionary,small
+SKYW,Industrials,small
+SLAB,Information Technology,mid
+SLB,Energy,large
+SLG,Real Estate,small
+SLGN,Materials,mid
+SLM,Financials,mid
+SLVM,Materials,small
+SM,Energy,small
+SMCI,Information Technology,large
+SMG,Materials,mid
+SMP,Consumer Discretionary,small
+SMPL,Consumer Staples,small
+SMTC,Information Technology,mid
+SN,Consumer Discretionary,mid
+SNA,Industrials,large
+SNDK,Information Technology,large
+SNDR,Industrials,small
+SNEX,Financials,small
+SNPS,Information Technology,large
+SNX,Information Technology,mid
+SO,Utilities,large
+SOLS,Materials,mid
+SOLV,Health Care,large
+SON,Materials,mid
+SONO,Consumer Discretionary,small
+SPG,Real Estate,large
+SPGI,Financials,large
+SPHR,Communication Services,small
+SPNT,Financials,small
+SPSC,Information Technology,small
+SPXC,Industrials,mid
+SR,Utilities,mid
+SRE,Utilities,large
+SRPT,Health Care,small
+SSB,Financials,mid
+SSD,Industrials,mid
+ST,Industrials,mid
+STAA,Health Care,small
+STAG,Real Estate,mid
+STBA,Financials,small
+STC,Financials,small
+STE,Health Care,large
+STEP,Financials,small
+STLD,Materials,large
+STRA,Consumer Discretionary,small
+STRL,Industrials,mid
+STT,Financials,large
+STWD,Financials,mid
+STX,Information Technology,large
+STZ,Consumer Staples,large
+SUPN,Health Care,small
+SW,Materials,large
+SWK,Industrials,large
+SWKS,Information Technology,large
+SWX,Utilities,mid
+SXI,Industrials,small
+SXT,Materials,small
+SYF,Financials,large
+SYK,Health Care,large
+SYNA,Information Technology,mid
+SYY,Consumer Staples,large
+T,Communication Services,large
+TALO,Energy,small
+TAP,Consumer Staples,large
+TBBK,Financials,small
+TCBI,Financials,mid
+TDC,Information Technology,small
+TDG,Industrials,large
+TDS,Communication Services,small
+TDW,Energy,small
+TDY,Information Technology,large
+TECH,Health Care,large
+TEL,Information Technology,large
+TER,Information Technology,large
+TEX,Industrials,mid
+TFC,Financials,large
+TFIN,Financials,small
+TFX,Health Care,small
+TGT,Consumer Staples,large
+TGTX,Health Care,small
+THC,Health Care,mid
+THG,Financials,mid
+THO,Consumer Discretionary,mid
+THRM,Consumer Discretionary,small
+TILE,Industrials,small
+TJX,Consumer Discretionary,large
+TKO,Communication Services,large
+TKR,Industrials,mid
+TLN,Utilities,mid
+TMDX,Health Care,small
+TMO,Health Care,large
+TMP,Financials,small
+TMUS,Communication Services,large
+TNC,Industrials,small
+TNDM,Health Care,small
+TNL,Consumer Discretionary,mid
+TOL,Consumer Discretionary,mid
+TOST,Financials,mid
+TPC,Industrials,small
+TPL,Energy,large
+TPR,Consumer Discretionary,large
+TR,Consumer Staples,small
+TREX,Industrials,mid
+TRGP,Energy,large
+TRIP,Communication Services,small
+TRMB,Information Technology,large
+TRMK,Financials,small
+TRN,Industrials,small
+TRNO,Real Estate,small
+TROW,Financials,large
+TRST,Financials,small
+TRU,Industrials,mid
+TRUP,Financials,small
+TRV,Financials,large
+TSCO,Consumer Discretionary,large
+TSLA,Consumer Discretionary,large
+TSN,Consumer Staples,large
+TT,Industrials,large
+TTC,Industrials,mid
+TTD,Communication Services,large
+TTEK,Industrials,mid
+TTMI,Information Technology,mid
+TTWO,Communication Services,large
+TWLO,Information Technology,mid
+TWO,Financials,small
+TXN,Information Technology,large
+TXNM,Utilities,mid
+TXRH,Consumer Discretionary,mid
+TXT,Industrials,large
+TYL,Information Technology,large
+UA,Consumer Discretionary,small
+UAA,Consumer Discretionary,small
+UAL,Industrials,large
+UBER,Industrials,large
+UBSI,Financials,mid
+UCB,Financials,small
+UCTT,Information Technology,small
+UDR,Real Estate,large
+UE,Real Estate,small
+UFCS,Financials,small
+UFPI,Industrials,mid
+UFPT,Health Care,small
+UGI,Utilities,mid
+UHS,Health Care,large
+ULS,Industrials,mid
+ULTA,Consumer Discretionary,large
+UMBF,Financials,mid
+UNF,Industrials,small
+UNFI,Consumer Staples,small
+UNH,Health Care,large
+UNIT,Communication Services,small
+UNM,Financials,mid
+UNP,Industrials,large
+UPBD,Consumer Discretionary,small
+UPS,Industrials,large
+UPWK,Industrials,small
+URBN,Consumer Discretionary,small
+URI,Industrials,large
+USB,Financials,large
+USFD,Consumer Staples,mid
+USLM,Materials,small
+USPH,Health Care,small
+UTHR,Health Care,mid
+UTI,Consumer Discretionary,small
+UTL,Utilities,small
+UVV,Consumer Staples,small
+V,Financials,large
+VAC,Consumer Discretionary,small
+VAL,Energy,mid
+VC,Consumer Discretionary,mid
+VCEL,Health Care,small
+VCTR,Financials,small
+VCYT,Health Care,small
+VECO,Information Technology,small
+VEEV,Health Care,large
+VFC,Consumer Discretionary,mid
+VGNT,Consumer Discretionary,small
+VIAV,Information Technology,mid
+VICI,Real Estate,large
+VICR,Industrials,mid
+VIR,Health Care,small
+VIRT,Financials,small
+VLO,Energy,large
+VLTO,Industrials,large
+VLY,Financials,mid
+VMC,Materials,large
+VMI,Industrials,mid
+VNO,Real Estate,mid
+VNOM,Energy,mid
+VNT,Information Technology,mid
+VOYA,Financials,mid
+VRRM,Industrials,small
+VRSK,Industrials,large
+VRSN,Information Technology,large
+VRT,Industrials,large
+VRTS,Financials,small
+VRTX,Health Care,large
+VSAT,Information Technology,small
+VSEC,Industrials,small
+VSH,Information Technology,small
+VSNT,Communication Services,small
+VST,Utilities,large
+VSTS,Industrials,small
+VSXY,Consumer Discretionary,small
+VTOL,Energy,small
+VTR,Real Estate,large
+VTRS,Health Care,large
+VVV,Consumer Discretionary,mid
+VVX,Industrials,small
+VYX,Information Technology,small
+VZ,Communication Services,large
+WAB,Industrials,large
+WABC,Financials,small
+WAFD,Financials,small
+WAL,Financials,mid
+WAT,Health Care,large
+WAY,Health Care,small
+WBD,Communication Services,large
+WBS,Financials,mid
+WCC,Industrials,mid
+WD,Financials,small
+WDAY,Information Technology,large
+WDC,Information Technology,large
+WDFC,Consumer Staples,small
+WEC,Utilities,large
+WELL,Real Estate,large
+WEN,Consumer Discretionary,small
+WERN,Industrials,small
+WEX,Financials,mid
+WFC,Financials,large
+WFRD,Energy,mid
+WGO,Consumer Discretionary,small
+WH,Consumer Discretionary,mid
+WHD,Energy,small
+WHR,Consumer Discretionary,mid
+WINA,Consumer Discretionary,small
+WING,Consumer Discretionary,mid
+WKC,Energy,small
+WLK,Materials,mid
+WLY,Communication Services,small
+WM,Industrials,large
+WMB,Energy,large
+WMG,Communication Services,mid
+WMS,Industrials,mid
+WMT,Consumer Staples,large
+WOR,Industrials,small
+WPC,Real Estate,mid
+WRB,Financials,large
+WRBY,Consumer Discretionary,small
+WRLD,Financials,small
+WS,Materials,small
+WSBC,Financials,small
+WSC,Industrials,small
+WSFS,Financials,small
+WSM,Consumer Discretionary,large
+WSO,Industrials,mid
+WST,Health Care,large
+WT,Financials,small
+WTFC,Financials,mid
+WTRG,Utilities,mid
+WTS,Industrials,mid
+WTW,Financials,large
+WU,Financials,small
+WWD,Industrials,mid
+WWW,Consumer Discretionary,small
+WY,Real Estate,large
+WYNN,Consumer Discretionary,large
+XEL,Utilities,large
+XHR,Real Estate,small
+XNCR,Health Care,small
+XOM,Energy,large
+XPEL,Consumer Discretionary,small
+XPO,Industrials,mid
+XRAY,Health Care,mid
+XYL,Industrials,large
+XYZ,Financials,large
+YELP,Communication Services,small
+YETI,Consumer Discretionary,mid
+YOU,Information Technology,small
+YUM,Consumer Discretionary,large
+ZBH,Health Care,large
+ZBRA,Information Technology,large
+ZD,Communication Services,small
+ZION,Financials,mid
+ZTS,Health Care,large
+ZWS,Industrials,small

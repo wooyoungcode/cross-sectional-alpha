@@ -3,7 +3,7 @@
 ## Development Setup
 
 ```bash
-git clone https://github.com/wooyoungkang/alpha_research.git
+git clone https://github.com/wooyoungcode/alpha-research.git
 cd alpha_research
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"

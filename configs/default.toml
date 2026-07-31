@@ -1,6 +1,6 @@
 [data]
 source = "yfinance"
-start_date = "2018-01-01"
+start_date = "2004-01-01"
 end_date = "2024-12-31"
 benchmark = "SPY"
 min_history_days = 252
@@ -9,31 +9,33 @@ min_median_dollar_volume = 10000000.0
 
 [features]
 winsorize_quantiles = [0.02, 0.98]
-target_horizons = [5, 10]
+target_horizons = [5, 21]
 benchmark_window = 60
 volatility_window = 20
 
 [split]
-validation_start = "2022-01-03"
-test_start = "2023-01-03"
+validation_start = "2016-01-04"
+test_start = "2020-01-02"
 retrain_frequency_days = 21
 min_train_observations = 252
 
 [model]
-model_type = "ridge"
-target_column = "target_return_5d"
+model_type = "gbm"
+target_column = "target_residual_21d_z"
 ridge_alpha = 2.0
 
 [portfolio]
-long_quantile = 0.10
-short_quantile = 0.10
-rebalance_frequency_days = 5
+long_quantile = 0.20
+short_quantile = 0.20
+rebalance_frequency_days = 21
 sector_neutral = true
 beta_neutral = true
 min_names_per_side = 5
+tranches = 7
 
 [backtest]
 transaction_cost_bps = 10.0
+holding_period_days = 21
 annualization_factor = 252
 benchmark_column = "benchmark_return"
 regime_vol_window = 20

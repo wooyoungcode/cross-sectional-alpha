@@ -1,5 +1,58 @@
 # Resume Bullets
 
-- Built a cross-sectional equity alpha research platform in Python that ingests daily U.S. equity data, engineers reversal, momentum, volatility, beta, and liquidity signals, and evaluates out-of-sample return predictions in a market-neutral framework.
-- Developed an end-to-end backtesting stack with walk-forward ridge modeling, sector-aware portfolio construction, beta-neutral scaling, turnover-based transaction costs, and Sharpe, drawdown, and regime-based performance diagnostics.
-- Produced reusable research infrastructure with cached datasets, config-driven experiments, report generation, and offline synthetic-data smoke tests to validate leakage controls and portfolio-risk logic before live data runs.
+Two bullets, sized for a resume line. Every figure is reproducible from
+`configs/default.toml` and appears in the README.
+
+---
+
+## Preferred pair
+
+> Built a walk-forward cross-sectional equity alpha platform over 1,000 S&P 1500
+> names (2004-2024) with a label-aware training embargo, beta-residual targets, and
+> sector- and beta-neutral construction across 7 overlapping tranches, reaching an
+> out-of-sample information coefficient of 0.031 (t = 13.9) and a Sharpe of 0.91
+> gross, 0.82 net of realistic transaction costs, at a 5.7% maximum drawdown.
+
+> Diagnosed the original backtest's reported Sharpe as an artifact of a one-day
+> return-alignment error worth -51 bps/day and an unintended +0.50 beta tilt;
+> rebuilt the target and neutralisation so the delivered book is beta-flat to 1e-17,
+> and raised the strategy's breakeven transaction cost from 20 to 50 bps.
+
+---
+
+## Why these two
+
+The first is the result. It leads with the information coefficient and its
+t-statistic rather than the Sharpe, because a t of 13.9 over 2,262 days is the
+harder number to dismiss, and it quotes gross *and* net so the figure survives the
+inevitable "gross or net?" follow-up.
+
+The second is the differentiator. Most candidates present a backtest; far fewer can
+show they found their own result was wrong and quantified why. It also sets up the
+strongest talking point available here: the reported 0.69 was a bug, and the tell
+was that expanding the universe from 57 names to 503 flipped it to -3.53.
+
+---
+
+## Interview follow-ups this invites, and the answers
+
+**"How many configurations did you try?"** Roughly 130. Selection was on the
+validation split with test held out; both windows now return 0.73 net, having
+started at 1.57 and 0.66. The convergence came from feature neutralisation at 0.5,
+which trades raw correlation for stability.
+
+**"Gross or net?"** Both are in the README. 0.91 gross, 0.82 at 5 bps, 0.75 at 10.
+Breakeven is 50 bps, so the result is not a cost-assumption artifact.
+
+**"Why is it not higher?"** Breadth and data. The published 1.35 to 3.6 figures use
+up to 30,000 names and hundreds of signals including fundamentals, gross of costs;
+the linear baselines in those same papers sit at 0.5 to 0.9. Breadth enters
+risk-adjusted return as its square root, and this universe is 1/30th the size.
+
+**"What did you try that failed?"** Eight things, tabulated in the README with their
+numbers. Volatility targeting is the instructive one: it raised the combined Sharpe
+to 0.83 while the untouched holdout fell to 0.60, so it was rejected.
+
+**"How do you know there is no look-ahead?"** The embargo is asserted directly in
+`tests/test_modeling.py` against the training-selection rule, rather than against
+downstream metrics, which can absorb a leak without failing.

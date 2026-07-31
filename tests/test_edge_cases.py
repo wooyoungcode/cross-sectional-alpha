@@ -125,13 +125,19 @@ def test_backtest_net_return_lte_gross_return_always() -> None:
     )
     returns = pd.DataFrame(
         {
-            "date": [pd.Timestamp("2024-01-02"), pd.Timestamp("2024-01-02")],
-            "ticker": ["A", "B"],
-            "daily_return": [0.02, -0.02],
-            "benchmark_return": [0.01, 0.01],
+            "date": [
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-03"),
+                pd.Timestamp("2024-01-03"),
+            ],
+            "ticker": ["A", "B", "A", "B"],
+            "daily_return": [0.02, -0.02, 0.02, -0.02],
+            "benchmark_return": [0.01, 0.01, 0.01, 0.01],
         }
     )
     result = run_backtest(weights, returns, BacktestConfig(transaction_cost_bps=50.0))
+    assert not result.daily_results.empty
     assert (result.daily_results["net_return"] <= result.daily_results["gross_return"] + 1e-12).all()
 
 
@@ -150,13 +156,19 @@ def test_backtest_cumulative_return_starts_near_zero() -> None:
     )
     returns = pd.DataFrame(
         {
-            "date": [pd.Timestamp("2024-01-02"), pd.Timestamp("2024-01-02")],
-            "ticker": ["A", "B"],
-            "daily_return": [0.01, -0.01],
-            "benchmark_return": [0.0, 0.0],
+            "date": [
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-03"),
+                pd.Timestamp("2024-01-03"),
+            ],
+            "ticker": ["A", "B", "A", "B"],
+            "daily_return": [0.01, -0.01, 0.01, -0.01],
+            "benchmark_return": [0.0, 0.0, 0.0, 0.0],
         }
     )
     result = run_backtest(weights, returns, BacktestConfig())
+    assert not result.daily_results.empty
     first_row = result.daily_results.iloc[0]
     assert np.isclose(first_row["cumulative_return"], first_row["net_return"], atol=1e-10)
 
@@ -175,11 +187,17 @@ def test_backtest_drawdown_is_non_positive() -> None:
     )
     returns = pd.DataFrame(
         {
-            "date": [pd.Timestamp("2024-01-02"), pd.Timestamp("2024-01-02")],
-            "ticker": ["A", "B"],
-            "daily_return": [0.01, -0.01],
-            "benchmark_return": [0.01, 0.01],
+            "date": [
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-02"),
+                pd.Timestamp("2024-01-03"),
+                pd.Timestamp("2024-01-03"),
+            ],
+            "ticker": ["A", "B", "A", "B"],
+            "daily_return": [0.01, -0.01, 0.01, -0.01],
+            "benchmark_return": [0.01, 0.01, 0.01, 0.01],
         }
     )
     result = run_backtest(weights, returns, BacktestConfig())
+    assert not result.daily_results.empty
     assert (result.daily_results["drawdown"] <= 0.0 + 1e-12).all()

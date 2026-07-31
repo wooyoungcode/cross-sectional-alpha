@@ -29,7 +29,14 @@ def run_pipeline(config_path: str) -> None:
     weights = construct_portfolio(predictions, exposures, config.portfolio)
     result = run_backtest(weights, features, config.backtest)
     save_backtest_result(result, "outputs")
-    generate_report(result, predictions, output_dir="outputs", report_path="docs/research_summary.md")
+    generate_report(
+        result,
+        predictions,
+        output_dir="outputs",
+        report_path="docs/research_summary.md",
+        features=features,
+        config=config,
+    )
 
 
 def main() -> None:

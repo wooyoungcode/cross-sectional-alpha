@@ -9,15 +9,18 @@ description = "Cross-sectional equity alpha research platform for systematic equ
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "lxml>=5.0",
   "matplotlib>=3.8",
   "numpy>=1.26",
   "pandas>=2.2",
+  "requests>=2.31",
   "scikit-learn>=1.4",
+  "tabulate>=0.9",
   "yfinance>=0.2.54",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
 
 [project.scripts]
 alpha-research = "alpha_research.cli:main"

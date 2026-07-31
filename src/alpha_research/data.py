@@ -10,73 +10,17 @@ from __future__ import annotations
 
 from dataclasses import asdict
 import hashlib
+import time
 from pathlib import Path
 import json
 
 import numpy as np
 import pandas as pd
 
+from . import universe
 from .config import DataConfig
 
 
-DEFAULT_SECTOR_MAP = {
-    "AAPL": "Technology",
-    "ABBV": "Health Care",
-    "ABT": "Health Care",
-    "AMGN": "Health Care",
-    "AMZN": "Consumer Discretionary",
-    "AVGO": "Technology",
-    "AXP": "Financials",
-    "BA": "Industrials",
-    "BAC": "Financials",
-    "CAT": "Industrials",
-    "COST": "Consumer Staples",
-    "CRM": "Technology",
-    "CSCO": "Technology",
-    "CVX": "Energy",
-    "DIS": "Communication Services",
-    "GOOGL": "Communication Services",
-    "GS": "Financials",
-    "HD": "Consumer Discretionary",
-    "HON": "Industrials",
-    "IBM": "Technology",
-    "INTC": "Technology",
-    "JNJ": "Health Care",
-    "JPM": "Financials",
-    "KO": "Consumer Staples",
-    "LIN": "Materials",
-    "LLY": "Health Care",
-    "LOW": "Consumer Discretionary",
-    "MA": "Financials",
-    "MCD": "Consumer Discretionary",
-    "META": "Communication Services",
-    "MMM": "Industrials",
-    "MRK": "Health Care",
-    "MS": "Financials",
-    "MSFT": "Technology",
-    "NEE": "Utilities",
-    "NFLX": "Communication Services",
-    "NKE": "Consumer Discretionary",
-    "NVDA": "Technology",
-    "ORCL": "Technology",
-    "PEP": "Consumer Staples",
-    "PFE": "Health Care",
-    "PG": "Consumer Staples",
-    "QCOM": "Technology",
-    "RTX": "Industrials",
-    "T": "Communication Services",
-    "TMO": "Health Care",
-    "TSLA": "Consumer Discretionary",
-    "UNH": "Health Care",
-    "UNP": "Industrials",
-    "UPS": "Industrials",
-    "USB": "Financials",
-    "V": "Financials",
-    "VZ": "Communication Services",
-    "WFC": "Financials",
-    "WMT": "Consumer Staples",
-    "XOM": "Energy",
-}
 
 
 def build_dataset(config: DataConfig) -> pd.DataFrame:
@@ -135,22 +79,75 @@ def _build_yfinance_dataset(config: DataConfig) -> pd.DataFrame:
         ) from exc
 
     tickers = sorted(set(config.tickers + [config.benchmark]))
-    raw = yf.download(
-        tickers=tickers,
-        start=config.start_date,
-        end=config.end_date,
-        auto_adjust=False,
-        progress=False,
-        group_by="ticker",
-        threads=True,
-    )
-    if raw.empty:
-        raise RuntimeError("No data returned from yfinance; check the date range and network access.")
+    panel = _download_in_batches(yf, tickers, config)
 
-    panel = _normalize_download(raw, tickers)
-    panel["sector"] = panel["ticker"].map(DEFAULT_SECTOR_MAP).fillna("Unknown")
+    # A silently empty benchmark is the worst possible failure here: it does not
+    # raise, it nulls every benchmark return, and that in turn nulls beta, the
+    # residual target, and the neutralisation constraints. Fail loudly instead.
+    benchmark_rows = panel.loc[panel["ticker"] == config.benchmark, "adj_close"]
+    if benchmark_rows.notna().sum() < config.min_history_days:
+        raise RuntimeError(
+            f"Benchmark {config.benchmark!r} returned {int(benchmark_rows.notna().sum())} usable rows. "
+            "Every benchmark-relative quantity in the pipeline depends on it; refusing to continue."
+        )
+
+    sectors = universe.sp1500().sectors
+    panel["sector"] = panel["ticker"].map(sectors).fillna("Unknown")
     panel["is_benchmark"] = panel["ticker"].eq(config.benchmark)
     return _finalize_panel(panel, config)
+
+
+def _download_in_batches(yf, tickers: list[str], config: DataConfig) -> pd.DataFrame:
+    """Download in chunks with retries, so a rate-limited slice does not go missing.
+
+    A single bulk request for a universe this size is routinely throttled, and
+    yfinance reports the failure by returning all-NaN columns rather than by
+    raising. Batching bounds each request, and retrying with a widening pause
+    recovers the throttled names instead of silently dropping them.
+    """
+    remaining = list(tickers)
+    frames: list[pd.DataFrame] = []
+
+    for attempt in range(config.download_max_attempts):
+        if not remaining:
+            break
+        if attempt:
+            time.sleep(config.download_retry_seconds * (2**(attempt - 1)))
+
+        recovered: list[str] = []
+        for start in range(0, len(remaining), config.download_batch_size):
+            batch = remaining[start : start + config.download_batch_size]
+            try:
+                raw = yf.download(
+                    tickers=batch,
+                    start=config.start_date,
+                    end=config.end_date,
+                    auto_adjust=False,
+                    progress=False,
+                    group_by="ticker",
+                    threads=True,
+                )
+            except Exception:  # noqa: BLE001 - a throttled batch is retried, not fatal
+                continue
+            if raw.empty:
+                continue
+            frame = _normalize_download(raw, batch)
+            # Throttled tickers come back as all-NaN columns rather than as an
+            # error, so usable rows are what decides success.
+            usable = frame.dropna(subset=["adj_close"])
+            if usable.empty:
+                continue
+            frames.append(usable)
+            recovered.extend(usable["ticker"].unique())
+
+        remaining = [ticker for ticker in remaining if ticker not in set(recovered)]
+
+    if not frames:
+        raise RuntimeError("No data returned from yfinance; check the date range and network access.")
+    if remaining:
+        print(f"[data] {len(remaining)} tickers returned no data after retries: {', '.join(remaining[:10])}"
+              + (" ..." if len(remaining) > 10 else ""))
+    return pd.concat(frames, ignore_index=True)
 
 
 def _normalize_download(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:

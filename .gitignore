@@ -13,8 +13,16 @@ outputs/*
 !outputs/.gitkeep
 !outputs/figures/
 outputs/figures/*
+# The figure set is the repository's front page: the README links every one of
+# these, so they are committed rather than left to be regenerated.
+!outputs/figures/information_coefficient.png
+!outputs/figures/ic_decay.png
+!outputs/figures/decile_returns.png
 !outputs/figures/equity_curve.png
+!outputs/figures/drawdown.png
+!outputs/figures/cost_sensitivity.png
 !outputs/figures/leg_contributions.png
+!outputs/figures/risk_exposures.png
 
 # IDE
 .vscode/

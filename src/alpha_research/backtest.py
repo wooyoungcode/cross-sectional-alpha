@@ -68,12 +68,20 @@ def run_backtest(
     if weights_frame.empty:
         raise ValueError("No portfolio weights were generated.")
 
-    daily_weights = _expand_weights(weights_frame, returns_frame["date"].drop_duplicates().sort_values())
+    daily_weights = _expand_weights(
+        weights_frame,
+        returns_frame["date"].drop_duplicates().sort_values(),
+        cost_config.holding_period_days,
+    )
+    daily_weights["date"] = pd.to_datetime(daily_weights["date"])
     joined = daily_weights.merge(returns_frame, on=["date", "ticker"], how="left")
     joined["gross_contribution"] = joined["weight"] * joined["daily_return"].fillna(0.0)
     joined["leg"] = np.where(joined["weight"] >= 0, "long", "short")
 
-    turnover = _compute_turnover(weights_frame)
+    # Trades are executed on the rebalance date, but the resulting book is only
+    # held from the following session onward (see ``_expand_weights``). Charge
+    # the cost on that first held day so it lands inside the return series.
+    turnover = _compute_turnover(daily_weights)
     joined = joined.merge(turnover, on="date", how="left")
     joined["transaction_cost"] = joined["turnover"].fillna(0.0) * (cost_config.transaction_cost_bps / 10_000.0)
 
@@ -121,39 +129,79 @@ def save_backtest_result(result: BacktestResult, output_dir: str | Path) -> None
     result.weights.to_csv(output_path / "weights.csv", index=False)
 
 
-def _expand_weights(weights: pd.DataFrame, available_dates: pd.Series) -> pd.DataFrame:
-    """Broadcast rebalance-date weights forward to every trading date until the next rebalance."""
+def _expand_weights(
+    weights: pd.DataFrame, available_dates: pd.Series, holding_period: int
+) -> pd.DataFrame:
+    """Broadcast each rebalance-date book over the sessions it is actually held.
+
+    ``daily_return`` on date ``t`` is the realised move from ``t-1`` to ``t``, so
+    a book formed from information available on rebalance date ``t0`` earns its
+    first return on the *following* session. Each book therefore spans
+    ``(t0, t0 + holding_period]``. Starting at ``t0`` itself would credit the new
+    book with a return realised before it existed, which inverts any reversal
+    component of the signal.
+
+    When books are formed more often than ``holding_period``, several are live at
+    once. That is the intended overlapping-tranche behaviour: the portfolio on any
+    date is the equal-weighted average of every book still inside its holding
+    window, so each rebalance turns over only a fraction of the position.
+    """
     weights = weights.sort_values(["date", "ticker"]).copy()
     available_dates = list(pd.to_datetime(available_dates))
     date_lookup = {date: idx for idx, date in enumerate(available_dates)}
+    holding_period = max(1, holding_period)
     rows: list[pd.DataFrame] = []
 
-    rebalance_dates = list(weights["date"].drop_duplicates().sort_values())
-    for idx, start_date in enumerate(rebalance_dates):
-        end_date = rebalance_dates[idx + 1] if idx + 1 < len(rebalance_dates) else available_dates[-1] + pd.Timedelta(days=1)
+    for start_date, block in weights.groupby("date", sort=True):
         start_idx = date_lookup.get(start_date)
         if start_idx is None:
             continue
-        daily_dates = [date for date in available_dates[start_idx:] if date < end_date]
-        block = weights.loc[weights["date"] == start_date].copy()
-        for daily_date in daily_dates:
+        held_dates = available_dates[start_idx + 1 : start_idx + 1 + holding_period]
+        if not held_dates:
+            continue
+        block = block.copy()
+        for held_date in held_dates:
             expanded = block.copy()
-            expanded["date"] = daily_date
+            expanded["date"] = held_date
             rows.append(expanded)
 
     if not rows:
         return pd.DataFrame(columns=weights.columns)
-    return pd.concat(rows, ignore_index=True)
+
+    expanded = pd.concat(rows, ignore_index=True)
+    # Average across the live tranches, then re-normalise so the blended book
+    # still carries unit gross exposure. Names held by several tranches keep the
+    # larger position, which is the point: persistent conviction gets more capital.
+    live_tranches = expanded.groupby("date")["ticker"].transform("size") / expanded.groupby(
+        "date"
+    )["ticker"].transform("nunique")
+    expanded["weight"] = expanded["weight"] / live_tranches.clip(lower=1.0)
+    expanded = expanded.groupby(["date", "ticker"], as_index=False).agg(
+        weight=("weight", "sum"),
+        prediction=("prediction", "mean"),
+        sector=("sector", "first"),
+        beta_60d=("beta_60d", "mean"),
+        split=("split", "first"),
+    )
+    gross = expanded.groupby("date")["weight"].transform(lambda w: w.abs().sum())
+    expanded["weight"] = expanded["weight"] / gross.where(gross > 0, 1.0)
+    return expanded
 
 
 def _compute_turnover(weights: pd.DataFrame) -> pd.DataFrame:
-    """Compute one-way turnover per rebalance date as sum of absolute weight changes."""
+    """Compute one-way turnover per rebalance date as sum of absolute weight changes.
+
+    The first rebalance is charged the full gross exposure, since establishing the
+    initial book is a real trade. ``min_count=1`` is what makes that happen: a
+    plain ``sum`` over the all-NaN first ``diff`` row returns 0.0 rather than NaN,
+    so the ``fillna`` fallback never fires and the opening trade comes out free.
+    """
     pivot = (
         weights.pivot_table(index="date", columns="ticker", values="weight", aggfunc="sum")
         .sort_index()
         .fillna(0.0)
     )
-    turnover = pivot.diff().abs().sum(axis=1).fillna(pivot.abs().sum(axis=1))
+    turnover = pivot.diff().abs().sum(axis=1, min_count=1).fillna(pivot.abs().sum(axis=1))
     return turnover.rename("turnover").reset_index()
 
 

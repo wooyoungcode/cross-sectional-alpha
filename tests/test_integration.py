@@ -16,6 +16,8 @@ def _make_config() -> ResearchConfig:
     config.data.start_date = "2020-01-01"
     config.data.end_date = "2024-12-31"
     config.data.synthetic_tickers = 60
+    config.split.validation_start = "2022-01-03"
+    config.split.test_start = "2023-01-03"
     # 10% of 60 = 6 names per side, above the default min of 5
     config.portfolio.long_quantile = 0.10
     config.portfolio.short_quantile = 0.10
