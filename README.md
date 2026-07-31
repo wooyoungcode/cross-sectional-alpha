@@ -48,7 +48,7 @@ against **+0.05 bps/day** for the correctly aligned one. Running the same code o
 503 names instead of 57 sent the reported Sharpe to **-3.53**, which is the tell:
 a real edge does not invert when you add names.
 
-Three further defects were found and fixed:
+Four further defects were found and fixed:
 
 | defect | consequence |
 |---|---|
