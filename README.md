@@ -8,7 +8,7 @@ under explicit transaction costs.
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Tests](https://github.com/wooyoungcode/alpha-research/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/wooyoungcode/cross-sectional-alpha/actions/workflows/tests.yml/badge.svg)
 
 ---
 
