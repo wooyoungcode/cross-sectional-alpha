@@ -43,8 +43,6 @@ volatility of 3.2%, not from a large edge.
 > now filtered. Removing them cut the annual return by more than half and the
 > volatility by more, which is why the Sharpe rose while the economics shrank.
 
-![Information coefficient](outputs/figures/information_coefficient.png)
-
 ---
 
 ## What this is not
@@ -134,15 +132,47 @@ whole book happens to roll on.
 
 ## Figures
 
-| | |
-|---|---|
-| [Information coefficient](outputs/figures/information_coefficient.png) | Daily rank IC with a 63-day mean, test period shaded |
-| [IC decay](outputs/figures/ic_decay.png) | IC by forward horizon, which is what sets the rebalance cadence |
-| [Decile monotonicity](outputs/figures/decile_returns.png) | Mean residual return by prediction decile |
-| [Equity curve](outputs/figures/equity_curve.png) | Cumulative return, gross and net |
-| [Drawdown](outputs/figures/drawdown.png) | |
-| [Cost sensitivity](outputs/figures/cost_sensitivity.png) | Net Sharpe against assumed cost, breakeven marked |
-| [Risk exposures](outputs/figures/risk_exposures.png) | Realised beta, net exposure and largest net sector, per rebalance |
+**Information coefficient.** Daily rank correlation between prediction and the
+21-session beta-residual forward return, with a 63-day mean. The test window is
+shaded. This is the primary evidence: a t-statistic of 13.9 over 2,262 days
+survives a multiple-testing haircut comfortably.
+
+![Information coefficient](outputs/figures/information_coefficient.png)
+
+**IC decay.** How long the signal stays informative, which is what sets the
+rebalance cadence. Rebalancing faster than the signal decays pays turnover for
+information the model has not refreshed.
+
+![IC decay](outputs/figures/ic_decay.png)
+
+**Decile monotonicity.** Mean residual return by prediction decile. A usable
+signal should order the deciles, not merely separate the extremes.
+
+![Decile returns](outputs/figures/decile_returns.png)
+
+**Cumulative return.** Gross and net of costs, test window shaded.
+
+![Equity curve](outputs/figures/equity_curve.png)
+
+**Drawdown.** Peak-to-trough on the net series.
+
+![Drawdown](outputs/figures/drawdown.png)
+
+**Cost sensitivity.** Net Sharpe against the assumed one-way cost, with breakeven
+marked. The strategy clears its cost assumption by roughly 3x.
+
+![Cost sensitivity](outputs/figures/cost_sensitivity.png)
+
+**Realised risk exposures.** Largest net sector above; dollar and beta neutrality
+below, on a scale that can actually resolve them. Both hold to machine precision
+across all 755 rebalances, which is the claim this figure exists to support.
+
+![Risk exposures](outputs/figures/risk_exposures.png)
+
+**Leg contributions.** Cumulative gross contribution from the long and short
+books separately.
+
+![Leg contributions](outputs/figures/leg_contributions.png)
 
 ---
 
