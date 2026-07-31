@@ -10,7 +10,7 @@ Two bullets, sized for a resume line. Every figure is reproducible from
 > Built a walk-forward cross-sectional equity alpha platform over 1,000 S&P 1500
 > names (2004-2024) with a label-aware training embargo, beta-residual targets, and
 > sector- and beta-neutral construction across 7 overlapping tranches, reaching an
-> out-of-sample information coefficient of 0.031 (t = 13.9) and a Sharpe of 1.22
+> out-of-sample information coefficient of 0.027 (t = 12.9) and a Sharpe of 1.22
 > gross, 1.00 net of realistic transaction costs, on 2.8% annualised return at
 > 3.2% volatility and a 6.4% maximum drawdown.
 
@@ -25,7 +25,7 @@ Two bullets, sized for a resume line. Every figure is reproducible from
 ## Why these two
 
 The first is the result. It leads with the information coefficient and its
-t-statistic rather than the Sharpe, because a t of 13.9 over 2,262 days is the
+t-statistic rather than the Sharpe, because a t of 12.9 over 2,242 days is the
 harder number to dismiss, and it quotes gross *and* net so the figure survives the
 inevitable "gross or net?" follow-up.
 

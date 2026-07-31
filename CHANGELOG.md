@@ -54,7 +54,7 @@ comparable figure.
 
 ### Results
 Out-of-sample 2016-2024: Sharpe 1.22 gross, 1.00 at 5 bps, 0.78 at 10 bps, on
-2.54% annualised return at 3.2% volatility. IC +0.0307 (t = +13.9). Max drawdown
+2.54% annualised return at 3.2% volatility. IC +0.0266 (t = +12.9). Max drawdown
 6.4%. Breakeven cost 28 bps one way.
 
 These supersede figures reported earlier in this release cycle (5.92% return at

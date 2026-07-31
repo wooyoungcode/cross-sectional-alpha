@@ -23,7 +23,7 @@ Out-of-sample, 2016-2024. 1,008 names, 2,262 trading days, 21-session holding pe
 
 | | |
 |---|---|
-| Information coefficient | **+0.0307**, t = **+13.9** |
+| Information coefficient | **+0.0266**, t = **+12.9** |
 | Max drawdown | **6.4%** |
 | Annualised volatility | **3.2%** |
 | Breakeven transaction cost | **28 bps** one way, against 10 assumed |
@@ -134,7 +134,7 @@ whole book happens to roll on.
 
 **Information coefficient.** Daily rank correlation between prediction and the
 21-session beta-residual forward return, with a 63-day mean. The test window is
-shaded. This is the primary evidence: a t-statistic of 13.9 over 2,262 days
+shaded. This is the primary evidence: a t-statistic of 12.9 over 2,242 days
 survives a multiple-testing haircut comfortably.
 
 ![Information coefficient](outputs/figures/information_coefficient.png)
