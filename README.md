@@ -117,6 +117,12 @@ the change that closed the validation-to-test gap:
 | **0.50** | +1.36 | **+0.73** | **0.63** |
 | 1.00 | +0.70 | +0.68 | 0.03 |
 
+These, and the failure table further down, were measured before the
+corporate-action filter landed, so their absolute levels sit above the headline
+figures above. They are kept because the comparison is what matters and it is
+unaffected: the ordering across neutralisation strengths, and the gap closing as
+neutralisation rises, both hold on the cleaned data.
+
 **Portfolio.** Top and bottom 20% by prediction, sector-budgeted, dollar and beta
 neutral, held 21 sessions across **7 overlapping tranches** so only a fraction of
 the book turns over at each rebalance. Tranching was the single largest

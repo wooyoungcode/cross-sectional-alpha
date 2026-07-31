@@ -10,13 +10,15 @@ Two bullets, sized for a resume line. Every figure is reproducible from
 > Built a walk-forward cross-sectional equity alpha platform over 1,000 S&P 1500
 > names (2004-2024) with a label-aware training embargo, beta-residual targets, and
 > sector- and beta-neutral construction across 7 overlapping tranches, reaching an
-> out-of-sample information coefficient of 0.031 (t = 13.9) and a Sharpe of 0.91
-> gross, 0.82 net of realistic transaction costs, at a 5.7% maximum drawdown.
+> out-of-sample information coefficient of 0.031 (t = 13.9) and a Sharpe of 1.22
+> gross, 1.00 net of realistic transaction costs, on 2.8% annualised return at
+> 3.2% volatility and a 6.4% maximum drawdown.
 
 > Diagnosed the original backtest's reported Sharpe as an artifact of a one-day
 > return-alignment error worth -51 bps/day and an unintended +0.50 beta tilt;
 > rebuilt the target and neutralisation so the delivered book is beta-flat to 1e-17,
-> and raised the strategy's breakeven transaction cost from 20 to 50 bps.
+> and filtered 129 corporate-action artifacts across 54 tickers, one of which
+> alone moved the book 21.9% in a single day.
 
 ---
 
@@ -37,12 +39,15 @@ was that expanding the universe from 57 names to 503 flipped it to -3.53.
 ## Interview follow-ups this invites, and the answers
 
 **"How many configurations did you try?"** Roughly 130. Selection was on the
-validation split with test held out; both windows now return 0.73 net, having
-started at 1.57 and 0.66. The convergence came from feature neutralisation at 0.5,
-which trades raw correlation for stability.
+validation split with test held out: validation returns 1.00 net at 10 bps and
+test 0.62. The two windows once stood at 1.57 and 0.66; feature neutralisation at
+0.5 closed most of that gap by trading raw correlation for stability.
 
-**"Gross or net?"** Both are in the README. 0.91 gross, 0.82 at 5 bps, 0.75 at 10.
-Breakeven is 50 bps, so the result is not a cost-assumption artifact.
+**"Gross or net?"** Both are in the README. 1.22 gross, 1.00 at 5 bps, 0.78 at 10.
+Breakeven is 28 bps against 10 assumed, so the result is not a cost-assumption
+artifact. Say the return alongside it: 2.8% a year at 3.2% volatility. This is a
+low-return, low-volatility book, and quoting the ratio alone invites a question
+better answered upfront.
 
 **"Why is it not higher?"** Breadth and data. The published 1.35 to 3.6 figures use
 up to 30,000 names and hundreds of signals including fundamentals, gross of costs;

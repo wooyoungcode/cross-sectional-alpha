@@ -53,8 +53,13 @@ comparable figure.
   specification count and limitations.
 
 ### Results
-Out-of-sample 2016-2024: Sharpe 0.91 gross, 0.82 at 5 bps, 0.75 at 10 bps.
-IC +0.0307 (t = +13.9). Max drawdown 5.7%. Breakeven cost 50 bps one way.
+Out-of-sample 2016-2024: Sharpe 1.22 gross, 1.00 at 5 bps, 0.78 at 10 bps, on
+2.54% annualised return at 3.2% volatility. IC +0.0307 (t = +13.9). Max drawdown
+6.4%. Breakeven cost 28 bps one way.
+
+These supersede figures reported earlier in this release cycle (5.92% return at
+0.75 net), which were inflated by unfiltered corporate actions; see the
+`max_abs_daily_return` filter.
 
 ## [0.1.0] - 2026-04-04
 
