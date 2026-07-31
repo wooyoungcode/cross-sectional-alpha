@@ -256,4 +256,5 @@ universe, and inside the range of live market-neutral strategies.
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE). Resume bullets for this project are in
+[docs/resume_bullets.md](docs/resume_bullets.md).
