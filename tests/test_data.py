@@ -9,7 +9,6 @@ import pytest
 from alpha_research.config import DataConfig
 from alpha_research.data import build_dataset
 
-
 REQUIRED_COLUMNS = {
     "date",
     "ticker",

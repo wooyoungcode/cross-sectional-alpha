@@ -8,19 +8,17 @@ config, so repeated runs with the same config are instantaneous.
 
 from __future__ import annotations
 
-from dataclasses import asdict
 import hashlib
-import time
-from pathlib import Path
 import json
+import time
+from dataclasses import asdict
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from . import universe
 from .config import DataConfig
-
-
 
 
 def build_dataset(config: DataConfig) -> pd.DataFrame:
@@ -127,7 +125,11 @@ def _download_in_batches(yf, tickers: list[str], config: DataConfig) -> pd.DataF
                     group_by="ticker",
                     threads=True,
                 )
-            except Exception:  # noqa: BLE001 - a throttled batch is retried, not fatal
+            except Exception as error:  # noqa: BLE001 - a throttled batch is retried, not fatal
+                # Reported rather than swallowed: a batch failing on every attempt
+                # is how tickers silently vanish from the panel, and the summary
+                # printed after the retry loop is easy to miss in a long run.
+                print(f"[data] batch of {len(batch)} failed on attempt {attempt + 1}: {error}")
                 continue
             if raw.empty:
                 continue

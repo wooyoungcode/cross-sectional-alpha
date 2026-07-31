@@ -8,9 +8,8 @@ Usage::
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
 
-from .backtest import save_backtest_result, run_backtest
+from .backtest import run_backtest, save_backtest_result
 from .config import load_config
 from .data import build_dataset
 from .features import generate_features

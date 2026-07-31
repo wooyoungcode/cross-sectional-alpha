@@ -10,7 +10,6 @@ from alpha_research.backtest import run_backtest
 from alpha_research.config import BacktestConfig, PortfolioConfig
 from alpha_research.portfolio import construct_portfolio
 
-
 # ---------------------------------------------------------------------------
 # Portfolio edge cases
 # ---------------------------------------------------------------------------
