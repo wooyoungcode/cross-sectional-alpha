@@ -33,21 +33,21 @@ express that bet, which is why the headline number here is smaller and worth mor
 
 Rank IC against the 21-session beta-residual forward return, measured on 2,242 out-of-sample days:
 
-- Mean IC **+0.0307**, IC information ratio **+0.294**, t-statistic **+13.9**
+- Mean IC **+0.0266**, IC information ratio **+0.272**, t-statistic **+12.9**
 - Positive in **9 of 9** calendar years
-- Share of days with IC above zero: **62.4%**
+- Share of days with IC above zero: **61.9%**
 
 ## Portfolio performance
 
 | split      |   days | annualised return   | annualised vol   |   Sharpe |   Newey-West t | max drawdown   |
 |:-----------|-------:|:--------------------|:-----------------|---------:|---------------:|:---------------|
-| validation |   1005 | +3.49%              | 2.52%            |     1.36 |           2.74 | -3.0%          |
-| test       |   1257 | +7.90%              | 10.38%           |     0.73 |           1.67 | -5.6%          |
-| combined   |   2262 | +5.92%              | 7.92%            |     0.73 |           2.21 | -5.6%          |
+| validation |   1005 | +3.08%              | 3.03%            |     1    |           1.92 | -4.1%          |
+| test       |   1257 | +2.11%              | 3.37%            |     0.62 |           1.34 | -6.4%          |
+| combined   |   2262 | +2.54%              | 3.22%            |     0.78 |           2.25 | -6.4%          |
 
-Average one-way turnover is 0.057 of gross per day, an implied holding
+Average one-way turnover is 0.056 of gross per day, an implied holding
 period of 18 sessions. The strategy breaks even at
-**50 bps** one way, against the 10 bps assumed here.
+**28 bps** one way, against the 10 bps assumed here.
 
 ## What the evidence supports
 

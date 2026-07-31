@@ -321,14 +321,41 @@ def _plot_risk_exposures(weights: pd.DataFrame, features: pd.DataFrame | None, p
         include_groups=False,
     )
 
-    figure, axis = plt.subplots(figsize=(9.0, 3.2))
-    axis.plot(per_date.index, per_date["beta"], color=_PALETTE["primary"], label="portfolio beta")
-    axis.plot(per_date.index, per_date["net"], color=_PALETTE["accent"], label="net dollar exposure")
-    axis.plot(per_date.index, per_date["max_sector"], color=_PALETTE["muted"], label="largest net sector")
-    axis.axhline(0.0, color=_PALETTE["muted"], linewidth=0.8)
-    axis.set_title("Realised risk exposures at each rebalance")
-    axis.set_ylabel("exposure (fraction of gross)")
-    axis.legend(loc="upper left", ncol=3)
+    # Beta and net exposure are zero to machine precision, so plotting them on
+    # the same axis as the sector exposure renders both as one invisible line
+    # along y=0: the figure would be unable to show the very property it exists
+    # to demonstrate. They get their own panel on a scale that can resolve them.
+    figure, (upper, lower) = plt.subplots(
+        2, 1,
+        figsize=(9.0, 4.8),
+        sharex=True,
+        # Space between the panels so the lower title clears the upper axis.
+        gridspec_kw={"height_ratios": [2, 1], "hspace": 0.38},
+    )
+
+    upper.plot(per_date.index, per_date["max_sector"] * 100, color=_PALETTE["primary"],
+               label="largest net sector")
+    upper.axhline(0.0, color=_PALETTE["muted"], linewidth=0.8)
+    upper.set_ylabel("exposure (% of gross)")
+    upper.set_title("Realised risk exposures at each rebalance")
+    # Headroom so the legend never sits on top of the series.
+    upper.set_ylim(top=float(per_date["max_sector"].max()) * 100 * 1.35)
+    upper.legend(loc="upper left")
+
+    worst_beta = float(per_date["beta"].abs().max())
+    worst_net = float(per_date["net"].abs().max())
+    lower.plot(per_date.index, per_date["beta"], color=_PALETTE["accent"], label="portfolio beta")
+    lower.plot(per_date.index, per_date["net"], color=_PALETTE["positive"],
+               linestyle="--", label="net dollar exposure")
+    lower.axhline(0.0, color=_PALETTE["muted"], linewidth=0.8)
+    lower.set_ylabel("exposure")
+    lower.set_title(
+        f"Dollar and beta neutrality hold to machine precision "
+        f"(worst |beta| {worst_beta:.0e}, worst |net| {worst_net:.0e})",
+        fontsize=9.0,
+    )
+    lower.legend(loc="upper left", ncol=2)
+
     figure.savefig(path)
     plt.close(figure)
 

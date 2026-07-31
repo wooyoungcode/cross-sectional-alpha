@@ -18,21 +18,30 @@ Out-of-sample, 2016-2024. 1,008 names, 2,262 trading days, 21-session holding pe
 
 | | gross | net @ 5 bps | net @ 10 bps |
 |---|---|---|---|
-| **Sharpe** | **0.91** | **0.82** | **0.75** |
-| Annualised return | 7.45% | 6.68% | 5.92% |
+| **Sharpe** | **1.22** | **1.00** | **0.78** |
+| Annualised return | 3.08% | 2.81% | 2.54% |
 
 | | |
 |---|---|
 | Information coefficient | **+0.0307**, t = **+13.9** |
-| Max drawdown | **5.7%** |
-| Breakeven transaction cost | **50 bps** one way, against 10 assumed |
-| Average one-way turnover | 5.7% of gross per day |
-| Implied holding period | 17.5 sessions |
-| Realised portfolio beta | 9e-18 |
+| Max drawdown | **6.4%** |
+| Annualised volatility | **3.2%** |
+| Breakeven transaction cost | **28 bps** one way, against 10 assumed |
+| Average one-way turnover | 5.6% of gross per day |
+| Realised portfolio beta | worst 9e-16 across 755 rebalances |
 
-Validation (2016-2019) and test (2020-2024) both return **0.73 net at 10 bps**.
-They began at 1.57 and 0.66; the convergence is the point, and the feature
-neutralisation section below explains what closed it.
+Split by window, net of 10 bps: validation (2016-2019) **1.00**, test (2020-2024)
+**0.62**. The returns are small in absolute terms; the Sharpe comes from a low
+volatility of 3.2%, not from a large edge.
+
+> **On an earlier version of these numbers.** A previous run reported a 5.92%
+> annual return at a Sharpe of 0.75. Both were contaminated: the price feed
+> carried corporate actions its adjustment failed to handle, the worst being a
+> ticker priced at $0.12 and then $31.00 the next session, a +25,733% daily
+> return. Positions were sized as though $0.12 were real, and that single row
+> moved the whole book +21.9% in a day. 129 such returns across 54 tickers are
+> now filtered. Removing them cut the annual return by more than half and the
+> volatility by more, which is why the Sharpe rose while the economics shrank.
 
 ![Information coefficient](outputs/figures/information_coefficient.png)
 
@@ -48,7 +57,7 @@ against **+0.05 bps/day** for the correctly aligned one. Running the same code o
 503 names instead of 57 sent the reported Sharpe to **-3.53**, which is the tell:
 a real edge does not invert when you add names.
 
-Four further defects were found and fixed:
+Five further defects were found and fixed:
 
 | defect | consequence |
 |---|---|
@@ -56,6 +65,7 @@ Four further defects were found and fixed:
 | Raw-return target | The model learned a market bet: the long leg carried **+0.50** more beta than the short leg |
 | Sign-flipped weights | 20% of long-book names were held short after the neutralisation projection |
 | Free opening trade | `sum` over an all-NaN `diff` row returns 0.0, so the initial book's turnover was never charged |
+| Unfiltered corporate actions | 129 implausible daily returns across 54 tickers, the worst +25,733%, sized as real positions |
 
 The headline above is the first number in this project that survives its own
 diagnostics.

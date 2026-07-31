@@ -28,6 +28,10 @@ class DataConfig:
     min_history_days: int = 252
     min_price: float = 5.0
     min_median_dollar_volume: float = 10_000_000.0
+    # Ceiling on a plausible single-day return. Above this the move is a
+    # corporate action the adjusted price series failed to handle rather than a
+    # market event; see the filter in data._finalize_panel.
+    max_abs_daily_return: float = 0.75
     # Bulk requests for a universe this size get throttled; batching plus retries
     # is what keeps a throttled slice from silently vanishing from the panel.
     download_batch_size: int = 100

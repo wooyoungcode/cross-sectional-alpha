@@ -255,6 +255,27 @@ def _finalize_panel(panel: pd.DataFrame, config: DataConfig) -> pd.DataFrame:
     panel["dollar_volume"] = panel["close"] * panel["volume"]
     panel["daily_return"] = panel.groupby("ticker", observed=True)["adj_close"].pct_change()
 
+    # Reject impossible single-day moves. Corporate actions that the adjusted
+    # price series does not handle, chiefly post-bankruptcy reorganisations and
+    # reverse splits, appear as enormous one-day returns. CHRD is the example
+    # that motivated this: its price goes from $0.12 to $31.00 on 2020-11-20, a
+    # return of +25,733%. One such row moved a whole market-neutral book by
+    # +21.9% in a day and materially inflated the reported Sharpe, since the
+    # position was sized as though that were a real price.
+    #
+    # A move of this size in an S&P 1500 constituent is a data artifact rather
+    # than a market event, so the return is dropped to NaN. The row is kept:
+    # only the return is untrustworthy, and blanking the ticker entirely would
+    # discard years of good history over one bad tick.
+    implausible = panel["daily_return"].abs() > config.max_abs_daily_return
+    if implausible.any():
+        affected = panel.loc[implausible, "ticker"].nunique()
+        print(
+            f"[data] dropped {int(implausible.sum())} implausible daily returns "
+            f"across {affected} tickers (|return| > {config.max_abs_daily_return:.0%})"
+        )
+        panel.loc[implausible, "daily_return"] = np.nan
+
     benchmark_returns = (
         panel.loc[panel["ticker"] == config.benchmark, ["date", "daily_return"]]
         .rename(columns={"daily_return": "benchmark_return"})
