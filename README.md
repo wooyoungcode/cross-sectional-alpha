@@ -235,8 +235,9 @@ features do not contain deeper interactions to find.
   cross-sectional effects, are absent because the feed is price-only. Size is
   proxied by traded notional.
 - **Flat transaction costs.** Real cost scales with participation and is higher in
-  the smaller, less liquid names the size signal favours. Breakeven at 50 bps
-  leaves wide headroom, but a participation-aware model would be more honest.
+  the smaller, less liquid names the size signal favours. Breakeven at 28 bps
+  leaves roughly 3x headroom over the 10 bps assumed, but a participation-aware
+  model would be more honest.
 - **Breadth.** 1,008 names against the 30,000 used in the published literature.
   Breadth enters risk-adjusted return as its square root, and is the largest
   single structural gap between this and results reported at Sharpe 2+.
@@ -249,8 +250,12 @@ fundamentals, and **gross of transaction costs**. The linear baselines in that
 same literature land at 0.5-0.9. Real equity market-neutral books, after costs,
 run roughly 0.5-1.0.
 
-At 0.91 gross and 0.82 net this sits with those linear baselines on 1/30th the
-universe, and inside the range of live market-neutral strategies.
+At 1.22 gross and 1.00 net of 5 bps this clears those linear baselines on 1/30th
+the universe and sits at the top of the range live market-neutral books run at.
+Net of 10 bps it falls to 0.78, mid-range. It stays well below the published
+machine-learning results, which is the direction the breadth and fundamentals
+gaps above would predict — and the ratio flatters the economics either way, since
+it comes from a 3.2% volatility rather than a large edge.
 
 ---
 
